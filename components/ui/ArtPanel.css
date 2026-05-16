@@ -1,0 +1,50 @@
+.art-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  width: 100%;
+  height: 100%;
+}
+
+.art-logo-animated {
+  flex: 0 0 auto;
+  width: 280px;
+  height: auto;
+}
+
+.art-logo-animated svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.art-logo-static {
+  flex: 0 0 auto;
+  width: 240px;
+  height: auto;
+  opacity: 0;
+  filter: blur(16px);
+  transition: opacity 1.8s ease-out, filter 1.8s ease-out;
+}
+
+.art-logo-visible {
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.art-logo-blurred {
+  opacity: 0;
+  filter: blur(16px);
+}
+
+.art-logo-static > div {
+  width: 100%;
+  height: auto;
+}
+
+.art-logo-static > div svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
