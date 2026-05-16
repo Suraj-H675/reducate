@@ -1,5 +1,7 @@
 # JG University — Landing Page
 
+Live link -  https://reducate-rust.vercel.app
+
 A modern, high-performance landing page for JG University, built with Next.js 14, Tailwind CSS, and Framer Motion.
 
 ## Tech Stack
