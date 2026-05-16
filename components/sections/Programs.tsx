@@ -40,7 +40,7 @@ export default function Programs() {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex tab-scroll justify-start gap-3 mb-12 min-[480px]:justify-center">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -76,12 +76,11 @@ export default function Programs() {
                 ))}
               </div>
             ) : (
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {activePrograms.map((program) => (
                   <motion.div
                     key={program.name}
                     variants={staggerItem}
-                    className="w-[calc(25%-12px)] min-w-[220px]"
                   >
                     <BorderGlow
                       edgeSensitivity={25}
@@ -92,6 +91,7 @@ export default function Programs() {
                       glowIntensity={1.2}
                       coneSpread={20}
                       animated={true}
+                      disableIntro={true}
                       isInView={isInView}
                       colors={['#EF4444', '#991B1B', '#F97316']}
                       fillOpacity={0.4}

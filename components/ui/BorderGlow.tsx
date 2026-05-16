@@ -12,6 +12,7 @@ interface BorderGlowProps {
   glowIntensity?: number;
   coneSpread?: number;
   animated?: boolean;
+  disableIntro?: boolean;
   colors?: string[];
   fillOpacity?: number;
   isInView?: boolean;
@@ -80,6 +81,7 @@ const BorderGlow: React.FC<BorderGlowProps> = ({
   glowIntensity = 1.0,
   coneSpread = 25,
   animated = false,
+  disableIntro = false,
   colors = ['#c084fc', '#f472b6', '#38bdf8'],
   fillOpacity = 0.5,
   isInView = false,
@@ -130,7 +132,7 @@ const BorderGlow: React.FC<BorderGlowProps> = ({
   }, [getEdgeProximity, getCursorAngle]);
 
   useEffect(() => {
-    if (!animated || !cardRef.current) return;
+    if (!animated || disableIntro || !cardRef.current) return;
     const card = cardRef.current;
 
     // If sweep already running, don't restart — just let it finish
@@ -156,7 +158,7 @@ const BorderGlow: React.FC<BorderGlowProps> = ({
         sweepActiveRef.current = false;
       },
     });
-  }, [animated, isInView]);
+  }, [animated, disableIntro, isInView]);
 
   const glowVars = buildGlowVars(glowColor, glowIntensity);
 

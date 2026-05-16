@@ -70,24 +70,24 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-surface/95 backdrop-blur-xl border-b border-white/[0.06]"
+            className="md:hidden mobile-overlay border-b border-white/[0.06]"
           >
-            <ul className="px-4 py-4 space-y-3">
+            <ul className="px-6 py-6 space-y-4">
               {navLinks.map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="block text-textSecondary hover:text-textPrimary transition-colors py-2"
+                    className="block text-textSecondary hover:text-textPrimary transition-colors py-3 text-base font-medium"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link}
                   </a>
                 </li>
               ))}
-              <li className="pt-2">
+              <li className="pt-4">
                 <a
                   href="#admissions"
-                  className="block bg-gradient-to-r from-accent to-highlight text-white px-6 py-3 rounded-full text-center font-semibold"
+                  className="block bg-gradient-to-r from-accent to-highlight text-white px-6 py-4 rounded-full text-center font-semibold text-base"
                   onClick={() => setMobileOpen(false)}
                 >
                   Apply Now

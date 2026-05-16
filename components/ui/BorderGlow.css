@@ -139,3 +139,20 @@
   overflow: auto;
   z-index: 1;
 }
+
+@media (max-width: 767px) {
+  .border-glow-card {
+    --edge-proximity: 0;
+  }
+
+  .border-glow-card::before,
+  .border-glow-card::after,
+  .border-glow-card > .edge-light {
+    display: none;
+  }
+
+  .border-glow-inner {
+    background: var(--card-bg, #1C0A0A);
+    border-radius: calc(var(--border-radius, 28px) * 0.7);
+  }
+}

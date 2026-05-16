@@ -161,12 +161,13 @@ export default function WholeBrainLearning() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        {/* 3-column grid: Left Brain | Logo | Right Brain — stacks on mobile */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
           <motion.div
             variants={slideInLeft}
             initial="hidden"
             animate={isInView ? 'visible' : 'hidden'}
-            className="bg-white/[0.04] border border-white/[0.08] backdrop-blur-xl rounded-2xl p-8 shadow-[0_0_60px_rgba(239,68,68,0.15)]"
+            className="bg-white/[0.04] border border-white/[0.08] backdrop-blur-xl rounded-2xl p-6 lg:p-8 shadow-[0_0_60px_rgba(239,68,68,0.15)]"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
@@ -189,7 +190,7 @@ export default function WholeBrainLearning() {
             </ul>
           </motion.div>
 
-          <div className="hidden md:flex flex-col items-center justify-center">
+          <div className="hidden lg:flex flex-col items-center justify-center">
             <div className="relative h-full flex flex-col items-center">
               <div className="absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-accent to-transparent" />
               <div className="relative bg-background px-2 py-4 z-10">
@@ -206,7 +207,7 @@ export default function WholeBrainLearning() {
             variants={slideInRight}
             initial="hidden"
             animate={isInView ? 'visible' : 'hidden'}
-            className="bg-white/[0.04] border border-white/[0.08] backdrop-blur-xl rounded-2xl p-8 shadow-[0_0_60px_rgba(249,115,22,0.15)]"
+            className="bg-white/[0.04] border border-white/[0.08] backdrop-blur-xl rounded-2xl p-6 lg:p-8 shadow-[0_0_60px_rgba(249,115,22,0.15)]"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-highlight/20 to-highlight/5 flex items-center justify-center">

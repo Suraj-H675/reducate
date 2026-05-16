@@ -38,10 +38,10 @@ export default function Hero() {
       </div>
 
       {/* Layer 2: Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-40 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left content */}
-          <div>
+          <div className="text-center lg:text-left">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -52,10 +52,10 @@ export default function Hero() {
               <span className="text-accent text-sm font-semibold">Admissions Open 2026–27</span>
             </motion.div>
 
-            {/* H1 */}
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
-              <span className="block text-textPrimary"><StaggeredText text="Build What" wordDelay={0.1} /></span>
-              <span className="block"><GradientText variant="accent"><StaggeredText text="Comes Next." wordDelay={0.1} /></GradientText></span>
+            {/* H1 — mobile: smaller, tighter */}
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
+              <span className="block text-textPrimary"><StaggeredText text="Build What" wordDelay={0.08} /></span>
+              <span className="block"><GradientText variant="accent"><StaggeredText text="Comes Next." wordDelay={0.08} /></GradientText></span>
             </h1>
 
             {/* Body */}
@@ -63,31 +63,31 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-base md:text-lg text-textSecondary leading-relaxed mb-8 max-w-lg"
+              className="text-base md:text-lg text-textSecondary leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0"
             >
               JG University prepares future tech leaders through AI, Quantum Computing, and hands-on experiential learning. Your career starts here.
             </motion.p>
 
-            {/* CTAs */}
+            {/* CTAs — stack on mobile */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex flex-wrap gap-4 mb-12"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start mb-10"
             >
-              <Button variant="primary" size="lg">Explore Programs</Button>
-              <Button variant="outline" size="lg" className="flex items-center gap-2">
+              <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">Explore Programs</Button>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto justify-center flex items-center gap-2">
                 <PlayCircle size={20} />
                 Watch Our Story
               </Button>
             </motion.div>
 
-            {/* Stats */}
+            {/* Stats — 2x2 on mobile, 4-col on desktop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6"
+              className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6"
             >
               {stats.map((stat) => (
                 <StatItem key={stat.label} {...stat} />

@@ -38,3 +38,51 @@ body {
   background-color: rgba(239, 68, 68, 0.3);
   color: #F8FAFC;
 }
+
+/* ─── Mobile refinements ─── */
+@media (max-width: 767px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent body overflow when mobile menu open */
+  body:has(#mobile-menu:checked) {
+    overflow: hidden;
+  }
+
+  /* Mobile hero — tighter vertical rhythm */
+  .hero-content {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Tab bar — horizontal scroll, no wrapping */
+  .tab-scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .tab-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Mobile cards — reduced padding, tighter line heights */
+  .mobile-card {
+    padding: 1.25rem;
+  }
+
+  /* Section rhythm — less vertical space on mobile */
+  .mobile-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Frosted glass menu overlay */
+  .mobile-overlay {
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}

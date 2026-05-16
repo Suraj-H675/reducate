@@ -21,7 +21,7 @@ export default function WhyJGU() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-textPrimary mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-tight text-textPrimary mb-3">
             Why Students Choose JGU
           </h2>
           <p className="text-textSecondary text-lg max-w-2xl mx-auto">

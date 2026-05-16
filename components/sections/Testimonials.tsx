@@ -40,7 +40,7 @@ export default function Testimonials() {
                 "
               </div>
               {/* Quote */}
-              <p className="text-textSecondary italic text-lg mb-6 leading-relaxed">
+              <p className="text-textSecondary italic text-base md:text-lg mb-6 leading-relaxed">
                 {t.quote}
               </p>
               {/* Divider */}

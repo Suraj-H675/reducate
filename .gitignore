@@ -45,3 +45,5 @@ next-env.d.ts
 # Docs
 CLAUDE.md
 handoff.md
+.vercel
+.env*.local
