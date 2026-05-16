@@ -39,8 +39,9 @@ Thumbs.db
 *.tsbuildinfo
 next-env.d.ts
 
-# Misc
-*.Zone.Identifier
+# Claude (local config — not for repo)
+.claude/
+
+# Docs
+CLAUDE.md
 handoff.md
-reactbits-installer-2.0.0.tgz
-package/
