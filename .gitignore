@@ -45,5 +45,11 @@ next-env.d.ts
 # Docs
 CLAUDE.md
 handoff.md
-.vercel
-.env*.local
+
+# OS metadata
+*.Zone.Identifier
+.DS_Store
+
+# Reactbits installer (not needed in repo)
+package/
+reactbits-installer-2.0.0.tgz
